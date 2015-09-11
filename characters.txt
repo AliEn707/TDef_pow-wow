@@ -1,0 +1,94 @@
+species(races) that will be in game:
+Humanoid:
+!  Human - basic race, they have to exist
+   Wolf - 
+
+Centaur like:
+	Centaur - human-horse.
+!	Arachne - human-spider.
+	Naga - human-sneak.
+
+Other:
+	Mutated - 
+	Infested - 
+	Undead - may be units of all normal races.
+	Plant - sentient creature.
+?	Artificial - cybernetic race, different machines.
+	Unnown - units, that can't be classified
+
+standart characters:
+  Heros:
+	
+  Weapons: - used only by heros
+    USP Match | Pistol
+    Barret M82 | Sniper
+    Walther WA 2000 | Sniper
+    TEN POINT Tactical | Sniper Crossbow
+    HK Xm8 | Riffle
+    HK G36 | Riffle
+    HK G11 | Riffle
+    HK MP7 | Submachine
+    FN P90 | Submachine
+    Steyr TMP | Submachine
+    Steyr Aug | Riffle
+    FN F2000 | Riffle
+    IMI Tavor TAR-21 | Riffle
+    Pancor Jackhammer | Shotgun
+    Franchi SPAS-12 | Shotgun
+    WINCHESTER Blaze SS | Crossbow
+    Horton Brotherhood | Crossbow
+    Barnett RAZR | Crossbow
+    Barnett Vengeance | Crossbow pistol
+    XM42 | Flamethrower
+
+  Npcs:
+	
+  Towers:
+	
+characters which can be added in future, like bonus units:
+
+Heros: 
+	games:
+		Aya Brea | Human | Parasite Eve | Squaresoft/Square Enix
+		No.9 | Mutated | Parasite Eve | Squaresoft/Square Enix
+		Jill Valentine | Human | Resident Evil | Capcom
+		Chris Redfield | Human | Resident Evil | Capcom
+		Leon Kennedy | Human | Resident Evil | Capcom
+		Albert Wesker | Human | Resident Evil | Capcom
+?		Alexia Ashcroft(1st monsterform) | Mutated | Resident Evil | Capcom
+		Nemesis | Mutated | Resident Evil | Capcom
+		Gordon Freeman | Human | Half-Life | Valve
+		Alyx Vance | Human | Half-Life 2 | Valve
+?		Vortigaunt | Unnown | Half-Life | Valve
+?		Alien Grunt | Unnown | Half-Life | Valve
+		Alex Mercer | Mutated | Prototype | Activision
+		Elexis Sinclaire | Human | SiN | Ritual Entertainment/Activision/Valve
+		Jessica Cannon | Human | SiN | Ritual Entertainment/Activision/Valve
+?		Bid Daddy | Unnown | Bioshock | 2K Games
+?		Big Sister | Unnown | Bioshock 2 | 2K Games
+?		Sarah Kerrigan | Mutated | Startcraft | Blizzard
+		Alice Liddell | Human | Alice: Madness Returns | Spicy Horse
+	manga:
+?		Lucy | Human | Elven Lied | Lynn Okamoto
+?		Nana | Human | Elven Lied | Lynn Okamoto
+
+  movies:
+      Groot | Plant | Guardians of the Galaxy | Marvel
+Weapons:
+	games:
+		Gunblade | Parasite Eve | Squaresoft/Square Enix
+		Pulse Rifle  | Half-Life 2 | Valve
+?		Hivehand | Half-Life | Valve
+?		Shock Roach | Half-Life | Valve
+?		Spore Launcher | Half-Life | Valve
+		Stake Gun | Painkiller | 
+?		Pepper Grinder | Alice: Madness Returns | Spicy Horse
+Npcs:
+	games:
+?		Headcrab | Unnown | Half-Life | Valve
+?		Bullsquid | Unnown | Half-Life | Valve
+?		Panther Eye | Unnown | Half-Life | Valve
+
+Towers:
+	games:
+?		Headcrab Shell | Half-Life 2 | Valve
