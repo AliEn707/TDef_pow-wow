@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+
+	<title>Экономика в MMORPG, часть 1</title>
+
+	<meta name="description" content="Если что-то поступает в игру - равнозначное ему по ценности должно игру покинуть. Конечно, идеального баланса 1:1 достигнуть невозможно, примеры далее">
+	<meta name="keywords" content="создание игр, статьи, бесплатно">	
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="yandex-verification" content="58e9491411e8e4cb">
+	
+	<meta http-equiv="Content-Language" content="ru">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="robots" content="all">
+	<meta name="resource-type" content="document">
+	
+		
+	<link rel="stylesheet" href="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/common.css" type="text/css" media="screen">
+	<link rel="shortcut icon" href="http://gamesmaker.ru/img/site/favicon.ico" type="image/x-icon">
+	
+		
+	<script src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/watch.js" async="" type="text/javascript"></script><script type="text/javascript" src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/utils.js"></script>
+	
+			<script type="text/javascript" src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/fancy.js"></script>
+		<script>onReady("fancy();");</script>
+		<link rel="stylesheet" href="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/jquery.css" type="text/css" media="screen">
+		
+		
+</head>
+<body id="view">
+	<div id="debug"></div>
+	<div id="wrap">
+		<div id="header">
+			<h1 id="logo"><a href="http://gamesmaker.ru/">games<span>maker</span><span class="slogan">Все о создании игр и не только</span></a></h1>
+				
+			<div id="user">
+				<ul>
+					<li class="home"><a href="http://gamesmaker.ru/login/">Войти</a></li>
+					<li><a href="http://gamesmaker.ru/remind/">Забыл?</a></li>
+					<li class="last"><a href="http://gamesmaker.ru/registration/">Регистрация</a></li>
+					<li class="border">&nbsp;</li>
+				</ul>
+			</div>
+			
+			<ul class="top-menu">
+								<li><a href="http://gamesmaker.ru/forum/"><span>Форум</span></a></li>
+				<li><a href="http://gamesmaker.ru/books/"><span>Книги</span></a></li>
+				<li><a href="http://gamesmaker.ru/news/"><span>Новости</span></a></li>
+				<li><a href="http://gamesmaker.ru/contacts/"><span>Контакты</span></a></li>
+			</ul>
+		</div>
+		<div id="content-wrap">
+			<div id="content" class="right">
+				<div class="post">
+	<p class="date">21 августа 2012 в 17:46</p>
+	<h1>Экономика  в&nbsp;MMORPG, часть&nbsp;1</h1>
+	<div class="post-content">
+		<img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/240x160x95.jpg" alt="Экономика в MMORPG, часть&nbsp;1" class="photo"><p>Эта
+ статья предназначена только  для&nbsp;информирования,  и&nbsp;вы  
+не&nbsp;должны безоговорочно доверять всему, что прочитаете  в&nbsp;ней.
+ Некоторые решения могут вам подойти, некоторые - нет,  и&nbsp;выбор 
+всегда остаётся  за&nbsp;вами, что именно  и&nbsp;как воплотить  
+в&nbsp;вашей игре. Многие люди жаловались  на&nbsp;экономику <b>Eternal Lands</b>
+  (на&nbsp;основе которой написана эта статья), так что имейте ввиду, 
+хоть я  и&nbsp;имею годы опыта  в&nbsp;этой сфере -  как&nbsp;и любой 
+человек, я всё же совершаю ошибки.</p>
+<p>Теперь, покончив  со&nbsp;вступлением, перейдём  к&nbsp;делу.</p>
+<p>В большинстве <b>MMORPG</b>, вне зависимости  от&nbsp;жанра  
+и&nbsp;типа,  у&nbsp;нас есть ресурсы (предметы, деньги), которые 
+поступают  в&nbsp;игру  и&nbsp;выходят  из&nbsp;неё.  В&nbsp;идеале, 
+соотношение должно быть 1:1, т.е. если что-то поступает  в&nbsp;игру - 
+равнозначное ему  по&nbsp;ценности должно игру покинуть. Конечно, 
+идеального баланса 1:1 достигнуть невозможно,  но&nbsp;далее будут 
+представлены трюки, которые могут быть полезными.</p>
+<p><b>Инструменты</b></p>
+<p>Кузнец владеет молотом,  у&nbsp;навигатора есть компас,  а&nbsp;повар
+ пользуется кастрюлями  и&nbsp;сковородками. Очевидно, что  
+у&nbsp;каждой профессии есть свои собственные инструменты, иногда 
+необходимые, иногда могущие помочь. Дизайн экономики MMO  
+не&nbsp;является исключением.  А&nbsp;вот  и&nbsp;ваши инструменты:</p>
+<p>1) <b>Офисный пакет, такой  как&nbsp;Microsoft Office</b>. Например, 
+бесплатный его аналог - OpenOffice. Редактор документов важен  
+для&nbsp;составления вашего дизайнерского документа  и&nbsp;записи 
+формул.  А&nbsp;spreadsheet может быть полезным  для&nbsp;быстрого 
+тестирования формул, определения необходимой цены ингридиента, 
+количества получаемого опыта  и&nbsp;т.д.<br>
+2) <b>Программа  для&nbsp;рисования диаграмм  и&nbsp;UML</b>. DIA - 
+беслпатная, относительно простая  в&nbsp;использовании программа. 
+Составление диаграмм того,  как&nbsp;должна работать ваша экономика, 
+может быть очень полезным  как&nbsp;для вас, так  и&nbsp;для людей, 
+работающих вместе  с&nbsp;вами. Иногда диаграммы можно показывать  
+и&nbsp;игрокам, чтобы они лучше понимали,  как&nbsp;работает экономика.<br>
+3) <b>Программа-блокнот</b>,  для&nbsp;записывания внезапно пришедших 
+идей  и&nbsp;составления каких-то заметок. Очень важно записывать все 
+свои идеи - ведь спустя несколько секунд мысль может уйти,  и&nbsp;потом
+ придётся ломать голову  и&nbsp;вспоминать...<br>
+4) <b>Текстовый редактор</b>. Если вы планируете хранить файлы, 
+относящиеся  к&nbsp;экономике,  в&nbsp;текстовом формате (таком  
+как&nbsp;XML),  то&nbsp;редактор текста типа Word  не&nbsp;подойдёт, 
+т.к. такие программы обычно  на&nbsp;выходе  не&nbsp;дают чисто 
+текстовый файл. Пример хорошего текстового редактора - Notepad++.<br>
+5) <b>Специальная программа</b>, созданная кем-то  из&nbsp;вашей команды
+  для&nbsp;использования сугубо внутри проекта, позволяющая быстро  
+и&nbsp;эффективно просмотреть информацию  о&nbsp;экономике,  
+а&nbsp;также проследить,  как&nbsp;изменение одной формулы влияет  
+на&nbsp;другие.  В&nbsp;то время,  как&nbsp;создание такой программы  
+не&nbsp;слишком сложная задача, она может оказаться очень полезной  
+в&nbsp;долгосрочной перспективе. Что должна уметь эта программа зависит 
+ от&nbsp;того, какой тип MMO вы создаёте  и&nbsp;сколько времени ваши 
+программисты могут уделить её созданию. Примером возможности программы 
+может служить определение количества времени, необходимого игроку  
+для&nbsp;создания меча, если он всё будет делать сам (добывать руду, 
+плавить, ковать, охлаждать  и&nbsp;т.д.). Программа должа принимать  
+в&nbsp;рассчёт такие факторы  как&nbsp;время, необходимое  
+для&nbsp;сбора каждой единицы руды, время  на&nbsp;выплавку, создание 
+меча, охлаждение...</p>
+<p>Или же - определение,  как&nbsp;много монстров определённого типа 
+придётся убить игроку, чтобы достичь нового уровня. Или симулировать 
+сражение двух игроков,  в&nbsp;котором вручную можно ввести все данные 
+(скилы, модификаторы расы, оружие, броню  и&nbsp;т.д.). Это может быть 
+полезно  при&nbsp;тестировании нового оружия  и&nbsp;брони.</p>
+<p><b>Входы  и&nbsp;выходы</b></p>
+<p>Прежде всего следует определить,  как&nbsp;именно ресурсы попадают  
+в&nbsp;игру  и&nbsp;как они будут  из&nbsp;неё выходить. Обратите 
+внимание - мы будем говорить только  о&nbsp;вещах, которые действительно
+ входят  и&nbsp;покидают  в&nbsp;игру,  а&nbsp;не  о&nbsp;предметах, 
+которые игрок теряет или приобретает. Например, если два игрока 
+обмениваются предметами, они оба потеряют  и&nbsp;получат предметы,  
+но&nbsp;на самом деле новые предметы  не&nbsp;входят  в&nbsp;игровой 
+мир,  и&nbsp;старые предметы его  не&nbsp;покидают. Если игрок теряет 
+предмет после гибели, этот предмет всё ещё  в&nbsp;игре; его может 
+подобрать другой игрок. </p>
+<p>Имейте ввиду, что этот список далеко  не&nbsp;исчерпывающий, и,  
+в&nbsp;зависимости  от&nbsp;типа игры, некоторые типы входа  
+и&nbsp;выхода могут  не&nbsp;подходить.</p>
+<p><b>Типы входа:</b></p>
+<p>1) Выпадение  из&nbsp;монстров. Наверное, наиболее простой тип входа.
+ Включает  в&nbsp;себя  как&nbsp;и обычные выпадения (кости, мясо, 
+шкуры), так  и&nbsp;редкие или очень редкие выпадения (дропы).<br>
+2) Сбор ресурсов  в&nbsp;окружающем мире. Шахтовая добыча (Mining), 
+например. Обычно такие ресурсы бесконечны,  но&nbsp;ограничитель может 
+быть установлен  на&nbsp;количество добываемых ресурсов  в&nbsp;сутки, 
+или же  на&nbsp;количество, добываемое одним игроком.<br>
+3) Предметы, созданные игроком. Обычно они создаются путём комбинирования двух или более предметов.<br>
+4) Ежедневные поступления ресурсов. Некоторые игры дают каждому игроку 
+некоторое количество ресурсов каждый день или каждый ход. Количество 
+передаваемых ресурсов может быть  как&nbsp;одинаковым  для&nbsp;всех, 
+так  и&nbsp;зависящим  от&nbsp;опыта игрока, предметов, которыми владеет
+ игрок, его зданий  и&nbsp;т.д.<br>
+5) Квесты. Когда игрок выполняет квест, обычно он получает какую-либо награду.<br>
+6) NPC.Обычно - это NPC-торговцы,  у&nbsp;которых игрок покупает или продаёт предметы.<br>
+7) Реальная жизнь. Несколько игр официально продают игровые предметы  
+за&nbsp;настоящие деньги. Если игрок продаёт другому игроку 
+внутриигровую валюту  за&nbsp;реальные деньги, (gold farming), новые 
+ресурсы  не&nbsp;входят  в&nbsp;игру,  а&nbsp;только передаются другому 
+игроку.  В&nbsp;то же время,  в&nbsp;правильно спроектированной игре 
+gold farming  не&nbsp;должно стать большой проблемой.<br>
+8) Состязания. Состязания отличаются  от&nbsp;квестов, т.к. обычно - это
+ единовременное событие,  с&nbsp;ограниченным количеством победителей. 
+Призы обычно выдаются разработчиками игры/администраторамим напрямую, 
+через специальные команды. Иногда игроки могут самостоятельно устраивать
+ соревнования  и&nbsp;передавать  в&nbsp;качестве призов свою 
+собственность -  в&nbsp;таком случае новые ресурсы  в&nbsp;игре  
+не&nbsp;появляются.<br>
+9) Божья Рука. Сюда входят все предметы, созданные искуственно  
+при&nbsp;помощи специальных команд  со&nbsp;стороны администрации,  
+не&nbsp;полученные  как&nbsp;награда  в&nbsp;состязании или купленные  
+за&nbsp;деньги. Например, это могут быть подарки  на&nbsp;праздники, 
+награда  за&nbsp;нахождение бага, предмет, созданный  в&nbsp;тестовых 
+целях,  и&nbsp;т.д.</p>
+<p><b>Типы выхода:</b></p>
+<p>1) Предметы, используемые  для&nbsp;добычи ресурсов. Например, кирка 
+ для&nbsp;добычи руды. Добыча некоторых ресурсов может требовать 
+использования специальных предметов, которые иногда ломаются. Ресурсы 
+типа цветов могут собираться  и&nbsp;без всяких предметов.<br>
+2) Предметы, созданные игроком. Ресурсы, которые необходимо потратить  
+для&nbsp;создания нового предмета. Более того, можно сделать так, чтобы 
+игрок терял ресурсы во время неудачи про создании предмета.<br>
+3) Налоги. Система виртуального налогооблажения может быть введена  
+в&nbsp;игре, таким образом каждый игрок будет должен платить налог  
+за&nbsp;каждую недвижимость, которой он владеет,  и&nbsp;т.д.<br>
+4) Квесты.  Не&nbsp;все квесты выдают награду  в&nbsp;виде ресурсов. 
+Иногда вы будете должны потратить некоторые количество денег или 
+ресурсов, чтобы получить нечто более ценное - опыт, открыть доступ  
+в&nbsp;секретную зону, получить возможность начать новый квест  
+и&nbsp;т.д.).<br>
+5) NPC.  Не&nbsp;важно, покупаете вы или продаёте,  но&nbsp;что-то 
+покидает игру. Если вы покупаете - игру покидают деньги, если продаёте -
+ игру покидает проданная вещь. Другие NPC могут  за&nbsp;плату 
+восстанавливать вам здоровье, давать вам благословение, позволять пройти
+  по&nbsp;мосту  и&nbsp;т.д.<br>
+6) Сломанные вещи. Предметы ломаются. Мы говорим об оружии, броне, 
+боеприпасах (если их нельзя использовать повторно после выстрела). 
+"Природная катастрофа" может быть также введена  в&nbsp;игру,  
+но&nbsp;об этом во второй части статьи.<br>
+7) Естественная убыль. Например, еда может портиться,  а&nbsp;предметы, 
+надолго оставленные без присмотра, могут быть украдены виртуальным вором
+  (на&nbsp;самом деле их уничтожает сервер).<br>
+8) Использованные предметы. Самый простой тип выхода, включает  
+в&nbsp;себя выпитые Зелья, магические кольца, которые были использованы,
+ книги, которые были прочитаны,  и&nbsp;т.д.<br>
+9) Штрафы. Иногда, когда игрока ловят  на&nbsp;выполнении запрещённых 
+действий,  в&nbsp;зависимости  от&nbsp;обстоятельств наказание может 
+включать  в&nbsp;себя денежный или "предметный" штраф. Ругаетесь матом  
+в&nbsp;публичном канале? Заплатите 1000 золотых или пройдите  в&nbsp;бан
+  на&nbsp;1 сутки. Иногда такой подход может быть эффективен, т.к. мало 
+кто захочет расстоваться  с&nbsp;трудом заработанными деньгами. </p>
+<p><b>Знай свои предметы</b><br>
+Одна  из&nbsp;задач, которая стоит перед вами - это внесение  в&nbsp;лог
+ сервера всех предметов, которые входят  и&nbsp;покидают игру. Такой 
+подсчёт должен производиться каждый день (или час, или ход,  
+в&nbsp;зависимости  от&nbsp;того, что  для&nbsp;вас удобнее). </p>
+<p>Информация должны выглядеть примерно вот так:</p>
+<p>Золотые монеты<br>
+Вход - 100000, выход - 120000.</p>
+<p>Тип входа:<br>
+NPC: 10000<br>
+Выпадение  из&nbsp;монстров: 80000<br>
+Другой: 10000</p>
+<p>Тип выхода:<br>
+NPC: 100000<br>
+Другой: 20000</p>
+<p>Таким образом, вы  не&nbsp;только сможете отслеживать общее 
+количество предметов  и&nbsp;ресурсов  в&nbsp;игре,  но&nbsp;и узнавать,
+ откуда они приходят  и&nbsp;куда уходят. Если  в&nbsp;вашей игре есть 
+система ручного производства предметов игроками,  то&nbsp;можно пойти 
+ещё дальше,  и&nbsp;вносить  в&nbsp;лог, куда  и&nbsp;на что уходят 
+ресурсы. Типа вот так:</p>
+<p>Железа потрачено  на&nbsp;производство: 100000<br>
+Потрачено на:<br>
+Short Sword: 5000<br>
+Long Sword: 100000<br>
+Chain Mail armor: 90000<br>
+и т.д.</p>
+<p>На основании таких логов можно определить:</p>
+<p>1) Какие предметы используются чаще всего.<br>
+2) Какие предметы используются реже всего.<br>
+3) Какие предметы редки (недостаточное количество  в&nbsp;игровом мире).</p>
+<p>Как только вы определите,  с&nbsp;какими предметами возникают 
+проблемы, вы можете изменить любые факторы, такие  как&nbsp;выпадение  
+из&nbsp;монстров, формулы производства, цену  и&nbsp;т.д.</p>
+<p>Если предмет используется недостаточно часто, например, магическое 
+кольцо, вы можете изменить его цену или сделать его более мощным. Если 
+предмет используют слишком часто, можно его ослабить, увеличить цену или
+ количество ресурсов, необходимых  для&nbsp;производства. Обращение  
+к&nbsp;игрокам  за&nbsp;отзывами - очень полезный ход  в&nbsp;целях 
+определения, почему тот или иной предмет используется часто/редко. </p>
+<p>В заключение данного раздела -  не&nbsp;принимайте поспешных решений.
+ Вы должны обладать данными статистики  как&nbsp;минимум  
+за&nbsp;неделю, прежде чем предпринимать какие-то действия. Количество 
+предметов варьируется день ото дня, также следует принимать во внимание 
+количество игроков, посещавших сервер  в&nbsp;этот день.  
+В&nbsp;выходные дни игроков обычно больше, чем  в&nbsp;будние, поэтому  
+и&nbsp;больше предметов будет входить/выходить  из&nbsp;игры. 
+Внутриигровые события также могут вызывать колебания, т.к. игроки будут 
+готовиться  к&nbsp;событию (тратить  и&nbsp;добывать больше ресурсов). 
+Новые предметы обычно некоторые время остаются малоиспользуемыми, до тех
+ пор пока все игроки  не&nbsp;узнают об их существовании  и&nbsp;не 
+включат их  в&nbsp;свою стратегию игры.</p>
+<p><b>Сделайте вашу валюту сильной</b></p>
+<p>Разные игры имеют разные валюты. Средневековая игра обычно использует
+ обобщённую "золотую монету",  в&nbsp;то время  как&nbsp;футуристические
+ игры используют что-то вроде "кредитов".  Но&nbsp;все они представляют 
+одно  и&nbsp;то же: официальную валюту. </p>
+<p>Так что же делает золотую монету ценной? Почему люди должны торговать
+ именно монетами,  а&nbsp;не ... ну, скажем, кольчужными доспехами или 
+морскими ракушками? </p>
+<p>Давным-давно, люди использовали бартерную систему обмена, когда рыбак
+ обменивал 10 рыб на, скажем, 5 кочанов капусты, или кузнец менял меч  
+на&nbsp;овцу. Такая система появилась сразу же,  как&nbsp;люди начали 
+образовывать общество,  и&nbsp;только недавно (несколько сотен лет 
+назад) они начали использовать "деньги". Преимущества денег  
+над&nbsp;бартером очевидны. Они более лёгкие, их проще хранить  
+и&nbsp;пересчитывать, их можно обменять  на&nbsp;всё что угодно,  
+и&nbsp;цена одной единицы денег достаточно мала  для&nbsp;того, чтобы вы
+ могли купить только одну рыбу,  а&nbsp;не целых пять  в&nbsp;обмен  
+на&nbsp;одну вашу овцу. </p>
+<p>Интересный вопрос - когда же люди приняли  и&nbsp;одобрили идею 
+монеты? Почему кто-то должен продавать овцу  за&nbsp;10 монет?  
+В&nbsp;конце концов, монету нельзя съесть,  и&nbsp;они  не&nbsp;имеют 
+практической ценности. Монеты сами  по&nbsp;себе бесполезны до тех пор, 
+пока вы  не&nbsp;найдёте того, кто будет готов торговать  с&nbsp;вами 
+посредством монет. Сегодня золото имеет практическую ценность - оно 
+входит  в&nbsp;состав многих вещей.  Но&nbsp;сотни лет назад  
+из&nbsp;золота можно было делать только украшения, статуи  
+и&nbsp;монеты,  и&nbsp;все эти предметы были необязательны  
+для&nbsp;выживания.</p>
+<p>В MMO, игроки  не&nbsp;будут иметь особого желания использовать 
+валюту, если  не&nbsp;смогут использовать  для&nbsp;своей пользы. Если 
+NPC  не&nbsp;принимает монеты  в&nbsp;обмен  на&nbsp;предметы,  
+и&nbsp;какая-либо функция игры  не&nbsp;требует оплаты посредством 
+монет,  то&nbsp;нет смысла вообще вводить такую валюту - никто  
+не&nbsp;будет ей пользоваться, т.к. она бесполезна. Если NPC готов 
+продать вам броню  за&nbsp;1000 золотых монет,  а&nbsp;у другого игрока 
+ то&nbsp;же самое можно получить  за&nbsp;100 цветков,  то&nbsp;золотая 
+монета потеряет свою ценность,  а&nbsp;другие цены начнут расти. </p>
+<p>Предотвратить это достаточно просто: создавайте вещи, которые  
+не&nbsp;могут быть получены никак, кроме  как&nbsp;путём покупки  
+у&nbsp;NPC  за&nbsp;золото. Реализуйте внутриигровые сервисы (создание 
+гильдии, покупка дома, выполнение квеста), которые требуют золота.  
+И&nbsp;НЕ ДЕЛАЙТЕ золотые монеты обыденным явлением (см. следующий 
+параграф).</p>
+<p><b>Управление экономикой, основанной  на&nbsp;игроках</b></p>
+<p>Как уже говорилось, экономика,  не&nbsp;управляемая "сверху" - это 
+нехорошо. Вам нужны NPC, которые будут покупать  и&nbsp;продавать  
+за&nbsp;вашу валюту.  Но&nbsp;в  то&nbsp;же время система без управления
+  со&nbsp;стороны игроков также - нехорошо.</p>
+<p>Есть несколько причин, почему вы должны вынуждать игроков торговать 
+между собой,  а&nbsp;не покупать  и&nbsp;продавать всё через магазин.</p>
+<p>1) Это усиливает взаимодействие между игроками, укрепляя сообщество игроков.<br>
+2) Это создаёт своеобразную саморегулируемую игру: некоторые люди  
+не&nbsp;будут торговать  с&nbsp;людьми, которые обманывают или обладают 
+плохой репутацией.<br>
+3) Позволяет  в&nbsp;игре появиться таким вещам,  как&nbsp;демпинг, 
+монополия, протекционизм, саботаж, воровство  и&nbsp;т.д.  В&nbsp;то 
+время,  как&nbsp;в реальной жизни такия явления нежелательны,  
+в&nbsp;игре они могут быть уместны, являясь  для&nbsp;неё солью  
+и&nbsp;перцем. </p>
+<p>Реализация подобной системы - сложная задача, поскольку вы имеете 
+дело  с&nbsp;людьми, которые очень непредсказуемы. Вы можете 
+разрабатывать принципы, основываясь  на&nbsp;предположении, что люди 
+будут играть только несколько часов  в&nbsp;день,  в&nbsp;то время  
+как&nbsp;некоторые будут играть намного больще - вплоть до 18+ часов  
+в&nbsp;сутки. Или же вы можете рассчитывать, что игрокам потребуется 10 
+месяцев, чтобы достичь определённого уровня,  и&nbsp;получить 
+возможность убить монстра или начать сбор ресурса,  а&nbsp;некоторые 
+"безумные" качки достигнут его  за&nbsp;3 месяца.  И&nbsp;конечно же  
+в&nbsp;игре будут присутствовать всякого рода системы автоматизации, 
+которые будут усиленными темпами вносить  в&nbsp;игру ресурсы до тех 
+пор, пока  не&nbsp;будут пойманы, или же баги  и&nbsp;недоработки, 
+которые позволят ускорить производство предметов. </p>
+<p>Не смотря  на&nbsp;то, что всего этого полностью избежать нельзя, 
+здесь применимо правило "5 П" : правильное планирование позволяет 
+предотвратить провал.</p>
+<p>Вот несколько трюков:</p>
+<p>1) Сделайте так, чтобы один скил зависел  от&nbsp;другого. Например, 
+чтобы предметы, необходимые  для&nbsp;добычи ресурса или производства 
+предмета, приходили  в&nbsp;игровой мир ТОЛЬКО путём выпадения  
+из&nbsp;монстра, которого может победить только Воин.<br>
+2) Некоторые NPC должны продавать обычные,  не&nbsp;редкие предметы  
+по&nbsp;повышенным ценам,  для&nbsp;того чтобы игроки, производящие 
+схожие предметы сами,  не&nbsp;завышали цены  и&nbsp;не обкрадывали 
+других игроков  (в&nbsp;противном случае они просто могут пойти  
+и&nbsp;купить нужны вещи  у&nbsp;NPC).<br>
+3) Так  как&nbsp;большинство игр работают  по&nbsp;принципу,  
+по&nbsp;которому игрок  для&nbsp;повышения уровня мастерства 
+производства должен произвести некоторое количество предметов,  
+на&nbsp;рынке будет явный переизбыток таких предметов. Этой проблемы 
+тяжело избежать, однако можно попробовать создать квесты,  
+для&nbsp;выполнения которых требуется большое количество таких 
+предметов, произведённых игроком- таким образом хотя бы часть предметов 
+будет покидать игру. Также можно сделать так, чтобы производство 
+предметов лучшего качества требовало предметы низшего качества  
+в&nbsp;качестве ингридиента.<br>
+4) Предметы высокого уровня, которые может произвести игрок, должны 
+требовать хотя бы один относительно редкий ингридиент. Это позволит 
+произведённому предмету остаться редким, иначе даже новички смогут 
+завладеть им, т.к. такие предметы наводнят рынок. Подуймайте об этом  
+с&nbsp;точки зрения реальной жизни - 50 лет назад компьютеры были 
+настолько дорогими, что только несколько компаний во всём мире обладали 
+ими. Теперь же количество компьютеров во всём мире перевалило  
+за&nbsp;несколько миллиардов,  и&nbsp;он перестал быть редкостью.  
+В&nbsp;жизни это хорошо,  а&nbsp;вот  в&nbsp;игре -  не&nbsp;очень.<br>
+5) Можно скомбинировать пункты 3  и&nbsp;4,  в&nbsp;результате чего редкий предмет обретёт ещё большую ценность.</p>
+<p>На этом заканчивается первая часть этой статьи. Во второй части мы рассмотрим:</p>
+<p>Советы  по&nbsp;типам входа  и&nbsp;выхода ресурсов  в&nbsp;игру,  и&nbsp;каких ошибок стоит избегать.<br>
+Как экономика взаимодействует  с&nbsp;другими подсистемами игры (графика  и&nbsp;сетевая система).<br>
+Получение отзывов  от&nbsp;игроков.<br>
+Правильное тестирование экономики  на&nbsp;стадии Бета-теста.</p>
+<p>Также  к&nbsp;статье после публикации были присланы комментарии, заслуживающие внимания:</p>
+<p>Статистика входа/выхода предметов должна использоваться  с&nbsp;осторожностью.</p>
+<p>Некоторые игроки уходят  из&nbsp;игры,  и&nbsp;их предметы остаются  
+в&nbsp;игре,  но&nbsp;в  то&nbsp;же время недоступны  ни&nbsp;для кого. 
+Эти предметы равносильны "выходу",  но&nbsp;не появляются  ни&nbsp;в 
+одной статистике.</p>
+<p>К тому же, желание достичь соотношения 1:1  не&nbsp;верно.  
+Как&nbsp;и  в&nbsp;любом обществе, люди стремятся  к&nbsp;накопительству
+ денег, предметов  и&nbsp;т.д. Хотя  и&nbsp;для многих предметов 
+соотношения 1:1 справедливо,  по&nbsp;разным причиным, например  
+для&nbsp;поддержания статуса "редкости". </p>
+<p>Не стоит также забывать  о&nbsp;том, что многие игроки хотели бы 
+получать предметы  как&nbsp;можно более простым путём.  С&nbsp;другой 
+стороны, сложная система экономики привлекает определённую категорию 
+игроков. Стоит помнить, что чем более сложная система представлена  
+в&nbsp;игре - тем сложнее будет  и&nbsp;сама игра.</p>
+	</div>
+<div class="clear"></div>
+<div class="share42init"><span id="share42"><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -0px 0 no-repeat" href="http://bobrdobr.ru/add.html?url=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;title=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Забобрить" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -16px 0 no-repeat" href="http://delicious.com/save?url=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;title=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Сохранить закладку в Delicious" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -32px 0 no-repeat" href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;title=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Сохранить закладку в Google" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -48px 0 no-repeat" href="http://www.liveinternet.ru/journal_post.php?action=n_add&amp;cnurl=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;cntitle=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Опубликовать в LiveInternet" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -64px 0 no-repeat" href="http://www.livejournal.com/update.bml?event=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;subject=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Опубликовать в LiveJournal" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -80px 0 no-repeat" href="http://connect.mail.ru/share?url=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;title=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Поделиться в Моем Мире@Mail.Ru" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -96px 0 no-repeat" href="http://memori.ru/link/?sm=1&amp;u_data[url]=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;u_data[name]=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Сохранить закладку в Memori.ru" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -112px 0 no-repeat" href="#" onclick="window.open('http://twitter.com/share?text=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201&amp;url=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false" title="Добавить в Twitter" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -128px 0 no-repeat" href="#" onclick="window.open('http://vk.com/share.php?url=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false" title="Поделиться В Контакте" target="_blank"></a><a rel="nofollow" style="display:inline-block;vertical-align:bottom;width:16px;height:16px;margin:0 6px 6px 0;padding:0;outline:none;background:url(/img/site/share42.png) -144px 0 no-repeat" href="http://zakladki.yandex.ru/newlink.xml?url=http%3A%2F%2Fgamesmaker.ru%2Findustry%2Fcommon%2Fekonomika-v-mmorpg-chast-1%2F&amp;name=%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG%2C%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201" title="Добавить в Яндекс.Закладки" target="_blank"></a></span></div>
+<script type="text/javascript" src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/share42.js"></script>
+<script type="text/javascript">share42('/img/site/')</script>
+
+
+
+<div class="clear"></div>
+<div id="similar">
+<b>Читайте далее:</b>
+<a href="http://gamesmaker.ru/industry/common/ekonomika-v-mmorpg-chast-2/">Экономика  в&nbsp;MMORPG, часть&nbsp;2</a>
+</div>
+
+<div class="clear"></div>
+<div id="similar">
+<b>Также читайте:</b>
+<a href="http://gamesmaker.ru/books/kak-stat-sozdatelem-kompyuternyh-igr/">Как стать создателем компьютерных игр</a>
+<a href="http://gamesmaker.ru/2d-game-engines/hge/sozdanie-kosmicheskoy-strelyalki-v-hge-chast-3/">Создание космической стрелялки  в&nbsp;HGE – часть 3</a>
+<a href="http://gamesmaker.ru/industry/common/rukovodstvo-kak-sozdat-mmorpg/">Руководство  как&nbsp;создать MMORPG</a>
+<a href="http://gamesmaker.ru/3d-game-engines/blitz3d/vvedenie-v-trehmernuyu-grafiku-i-osnovy-raboty-v-blitz3d/">Введение  в&nbsp;трехмерную графику  и&nbsp;основы работы  в&nbsp;Blitz3D</a>
+</div>
+
+<div class="clear"></div>
+<div id="comments">
+	<div id="info">
+			<span id="add"><a href="http://gamesmaker.ru/login/" target="_blank">написать комментарий</a></span>
+			<span id="comm"><a href="#comments">комментарии: 0</a></span>	
+	</div>
+	<div class="clear"></div>
+	
+	<div class="content">
+			<div class="nocomment">
+			<p>комментарии отсутствуют</p>
+			<p><a href="http://gamesmaker.ru/login/">авторизуйтесь</a></p>		</div>
+	</div>
+	<form onsubmit="sendcomm();return false;" id="sendcommform" enctype="multipart/form-data">
+	<input value="151" name="object_id" type="hidden">		
+		<table>
+			<tbody><tr>
+				<td><div id="bbcodes" align="left">
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/bold.gif" onclick="instag(0);" title="Жирный"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/italic.gif" onclick="instag(1);" title="Курсив"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/underline.gif" onclick="instag(2);" title="Подчеркнутый"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/s.gif" onclick="instag(3);" title="Перечеркнутый"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/sub.gif" onclick="instag(4);"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/sup.gif" onclick="instag(5);" title="Степень"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/code.gif" onclick="instag(6);" title="Исходный код"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/image.gif" onclick="tag_image();" title="Рисунок"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/youtube.ico" onclick="tag_youtube();" title="Видео с YouTube"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/link.gif" onclick="tag_url();" title="Ссылка"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/quote.gif" onclick="instag(7);" title="Цитата"></a>
+<a href="javascript:{}"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/spoiler.gif" onclick="instag(12);" title="Спойлер"></a>
+</div></td>
+				<td id="comm-type">Новый комментарий</td>
+				<td id="comm-user">
+					<a href="javascript:{}" class="link" title="Отменить" onclick="write_comm();"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/icon-16-logout.png"></a>
+					<a href="#" class="user"></a>
+					<p class="cdate"></p>
+				</td>
+			</tr>
+				<tr>
+					<td colspan="3"><input name="email" id="email" maxlength="64" type="text"> <label for="email">электронная почта <span class="info">необязательно</span></label> <p class="errors"></p></td>
+				</tr>
+			<tr>
+				<td colspan="3"><textarea id="message" name="message" maxlength="4000" onkeyup="ismaxlength(this);" onclick="ismaxlength(this);"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="subscribe"><input name="subscribe" id="subscribe" value="1" type="checkbox"> <label for="subscribe">Вы хотите получать уведомления на e-mail о новых сообщениях в этой теме?</label></td>
+				<td class="submit"><input value="Сохранить" type="submit"></td>
+			</tr>
+		</tbody></table>
+	</form>
+</div>
+</div>					
+			</div>
+			<div id="leftbar" class="left">
+				<ul class="sidemenu">
+					<li><h2>Полезное</h2>
+						<ul>
+							<li><a href="http://gamesmaker.ru/forum/">Форум</a>
+							</li><li><a href="http://gamesmaker.ru/books/">Книги</a>
+							</li><li><a href="http://gamesmaker.ru/news/">Новости</a>
+						</li></ul>
+					</li>
+				</ul>
+																						<ul class="sidemenu">
+					<li><h2>Конструкторы игр</h2>
+											<ul>
+													<li><a href="http://gamesmaker.ru/konstruktory-igr/game-maker/">Game Maker</a></li>
+												</ul>
+										</li>
+				</ul>
+								<ul class="sidemenu">
+					<li><h2>3d движки</h2>
+											<ul>
+													<li><a href="http://gamesmaker.ru/3d-game-engines/blitz3d/">Blitz3d</a></li>
+													<li><a href="http://gamesmaker.ru/3d-game-engines/ogre3d/">Ogre3d</a></li>
+													<li><a href="http://gamesmaker.ru/3d-game-engines/unity3d/">Unity3d</a></li>
+												</ul>
+										</li>
+				</ul>
+								<ul class="sidemenu">
+					<li><h2>2d движки</h2>
+											<ul>
+													<li><a href="http://gamesmaker.ru/2d-game-engines/private/">Собственная разработка</a></li>
+													<li><a href="http://gamesmaker.ru/2d-game-engines/box2d/">Box2d</a></li>
+													<li><a href="http://gamesmaker.ru/2d-game-engines/hge/">Haaf's Game Engine(hge)</a></li>
+												</ul>
+										</li>
+				</ul>
+								<ul class="sidemenu">
+					<li><h2>Игровая индустрия</h2>
+											<ul>
+													<li><a href="http://gamesmaker.ru/industry/interview/">Интервью</a></li>
+													<li class="current"><a href="http://gamesmaker.ru/industry/common/">Общее</a></li>
+												</ul>
+										</li>
+				</ul>
+								<ul class="sidemenu">
+					<li><h2>Игровой дизайн</h2>
+											<ul>
+													<li><a href="http://gamesmaker.ru/gamedesign/levels/">Дизайн уровней</a></li>
+												</ul>
+										</li>
+				</ul>
+								<ul class="sidemenu">
+					<li><h2>Программирование игр</h2>
+											<ul>
+													<li><a href="http://gamesmaker.ru/programming/c/">C++ для начинающих</a></li>
+													<li><a href="http://gamesmaker.ru/programming/directx/">DirectX</a></li>
+													<li><a href="http://gamesmaker.ru/programming/opengl/">OpenGL</a></li>
+													<li><a href="http://gamesmaker.ru/programming/algorithm/">Алгоритмы</a></li>
+													<li><a href="http://gamesmaker.ru/programming/graphics/">Графика</a></li>
+													<li><a href="http://gamesmaker.ru/programming/ai/">Игровая логика и ИИ</a></li>
+													<li><a href="http://gamesmaker.ru/programming/common/">Общее</a></li>
+												</ul>
+										</li>
+				</ul>
+																	
+			<a href="javascript:{}" onclick="toggle_menu_side();" class="java" id="menu_toggler">сделать меню справа</a>				<div class="online">
+	<h2>Сейчас на сайте</h2>
+	<p>Гостей: 21<br>
+	Зарегистрированных: 0<br>
+		</p>
+</div>					<div class="lcomments">
+	<h2>Последнее с форума</h2>
+			<a href="http://gamesmaker.ru/forum/topic/912/#post-914"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">f100d &#8594; Мощнейший флуд телефона  от&nbsp;Flood Club<br><span>На форуме появляюсь редко пишите  по&nbsp;контактам
+</span></a>
+		<div class="clear"></div>
+			<a href="http://gamesmaker.ru/forum/topic/905/#post-913"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">proxyan &#8594; Vip-Proxy - Качественные  и&nbsp;быстрые прокси<br><span>Доброго времени друзья. Провели обновление,расширили кол-во подсетей,добавили новые айпи адреса  на&amp;...</span></a>
+		<div class="clear"></div>
+			<a href="http://gamesmaker.ru/forum/topic/911/#post-911"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">DMZH &#8594; Great Traffic Aggressor [Android]<br><span>Great Traffic Aggressor   Googl Play      http://www.youtube.com/
+
+      Флориан Поп был обычным офи...</span></a>
+		<div class="clear"></div>
+			<a href="http://gamesmaker.ru/forum/topic/891/#post-910"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/26x26x95.jpg">Sdelkin &#8594; Продажа аккаунтов разных сервисов<br><span>Обновлены цены. Подвоз товаров фейсбук!
+</span></a>
+		<div class="clear"></div>
+			<a href="http://gamesmaker.ru/forum/topic/909/#post-909"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Skaner &#8594; 2D HTML5 Engine J2DS<br><span>   Характеристики - Жанровая направленность: 2D игры любого жанра  и&nbsp;типа; - Платформа: HTML5; ...</span></a>
+		<div class="clear"></div>
+			<a href="http://gamesmaker.ru/forum/topic/899/#post-908"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">darkwinddev &#8594; [2d] Beaver time [puzzle] [Android &amp; Windows]<br><span>Написал статью  на&nbsp;хабрахабр  о&nbsp;технических моментах разработки
+</span></a>
+		<div class="clear"></div>
+			<a href="http://gamesmaker.ru/forum/topic/849/#post-907"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">kysovue &#8594; Комплексный прогон сайтов ru  и&nbsp;en<br><span>Всем привет,  с&nbsp;25.08.15  по&nbsp;01.09.15 скидка -30%  на&nbsp;любой тариф!
+</span></a>
+		<div class="clear"></div>
+	</div>
+					<div class="lcomments">
+	<h2>Последние комментарии</h2>
+			<a href="http://gamesmaker.ru/konstruktory-igr/game-maker/fizika/#comm-479"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Физика  в&nbsp;Game Maker<br><span>Большое спасибо!
+</span></a>
+			<a href="http://gamesmaker.ru/programming/graphics/format-dannyh-bmp-bitmap/#comm-478"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Формат данных BMP (bitmap)<br><span>Но материал хорош
+</span></a>
+			<a href="http://gamesmaker.ru/programming/graphics/format-dannyh-bmp-bitmap/#comm-477"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Формат данных BMP (bitmap)<br><span>Потоки  при&nbsp;обработке мультимедии(картинка/музыка/видео), рекомендуется  не&nbsp;использовать п...</span></a>
+			<a href="http://gamesmaker.ru/programming/c/vvedenie-v-winapi-chast-pervaya-sozdanie-okna/#comm-469"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Введение  в&nbsp;WinAPI. Часть первая. Создание окна.<br><span>Зачёт!
+</span></a>
+			<a href="http://gamesmaker.ru/books/osnovy-razrabotki-igr-na-unity-3d/#comm-464"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Основы разработки игр  на&nbsp;Unity 3D<br><span>На самом деле её переводил Кличко
+</span></a>
+			<a href="http://gamesmaker.ru/gamedesign/levels/pravila-horoshego-3d-shutera-ot-1go-lica/#comm-461"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Правила хорошего 3д шутера  от&nbsp;1го лица<br><span>Скоро выйдет игрухааа
+</span></a>
+			<a href="http://gamesmaker.ru/gamedesign/levels/pravila-horoshego-3d-shutera-ot-1go-lica/#comm-460"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; Правила хорошего 3д шутера  от&nbsp;1го лица<br><span>Отлично
+</span></a>
+			<a href="http://gamesmaker.ru/3d-game-engines/unity3d/gui/#comm-459"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/0.jpg">Гость &#8594; GUI  в&nbsp;Unity3d<br><span>может кто знает  как&nbsp;у них всё работает? http://premiumkeys.ru/gta5/33101 они потом оповестят?
+</span></a>
+	</div>
+				
+				<div class="lcomments">
+				<h2>Наши друзья</h2>
+												<noindex><p><a href="http://www.gamedev.ru/top/" rel="nofollow"><img src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/a.gif" style="border: 0;" alt="Топ Разработка игр" height="31" width="88"></a></p></noindex>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footer-margin"></div>
+		<div id="footer">
+			<p class="copyright"><span>© 2010—2015 Games Maker<br>При полном или частичном копировании информации ссылка на gamesmaker.ru обязательна.</span></p>
+			<ul><li><a href="http://gamesmaker.ru/forum/">Форум</a><span>·</span></li><li><a href="http://gamesmaker.ru/books/">Книги</a><span>·</span></li><li><a href="http://gamesmaker.ru/news/">Новости</a><span>·</span></li><li><a href="http://gamesmaker.ru/contacts/">Контакты</a></li></ul>
+		</div>
+	</div>
+	<noindex><script type="text/javascript" src="%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0%20%D0%B2%20MMORPG,%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201_files/metrika.js"></script><noscript><div><img src="//mc.yandex.ru/watch/21060079" style="position:absolute; left:-9999px;" alt="" /></div></noscript></noindex>
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
+<!--14.09.2015 15:30:43-->
