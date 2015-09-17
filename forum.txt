@@ -3,51 +3,51 @@ Forum  - раздел
 has_many :topics, as: :topicable, dependent: :destroy
 has_many :threads, dependent: :destroy
 belongs_to :user
-{
-	name
-	description
-	user_id
-}
+[
+	name string
+	description text
+	user_id integer
+]
 
 Forum::Thread - подраздел
 has_many :topics, as: :topicable, dependent: :destroy
 belongs_to :forum, touch: true
 belongs_to :user
-{
-	name
-	description
-	user_id
-	thread_id
-}
+[
+	name string
+	description text
+	user_id integer
+	thread_id integer
+]
 	
 Forum::Topic - тема
 has_many :messages, :dependent => :destroy#, :as =>:msg_dest, :class_name => "Message" #если Message который уже есть
 belongs_to :topicable, polymorphic: true, touch: true
 belongs_to :user
-{
-	name
-	description
-	user_id
-	topicable_id
-	topicable_type
-}
+[
+	name string
+	description text
+	user_id integer
+	topicable_id integer
+	topicable_type string
+]
 
 сообщения или Forum::Message или Message
 если Forum::Message
 belongs_to :topic, class_name: "Forum::Topic"
 belongs_to :user
-{
-	data
-	user_id
-	topic_id
-}
+[
+	data text
+	user_id integer
+	topic_id integer
+]
 
 или Message уже есть
 belongs_to :user, touch: true
 belongs_to :msg_dest, polymorphic: true, touch: true
-{
-	data
-	user_id
-	msg_dest_id
-	msg_dest_type
-}
+[
+	data text
+	user_id integer
+	msg_dest_id integer
+	msg_dest_type string
+]
