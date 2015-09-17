@@ -1,0 +1,274 @@
+﻿-> - to server
+<- - to client
+
+all data in little endian
+
+//bit constants, use as &
+BIT_1:int= 1;
+BIT_2:int= 2;
+BIT_3:int= 4;
+BIT_4:int= 8;
+BIT_5:int= 16;
+BIT_6:int= 32;
+BIT_7:int= 64;
+BIT_8:int= 128;
+BIT_9:int= 256;
+BIT_10:int= 512;
+BIT_11:int= 1024;
+BIT_12:int= 2048;
+BIT_13:int= 4096;
+BIT_14:int= 8192;
+BIT_15:int= 16384;
+BIT_16:int= 32768;
+BIT_17:int= 65536;
+BIT_18:int= 131072;
+BIT_19:int= 262144;
+BIT_20:int= 524288;
+BIT_21:int= 1048576;
+BIT_22:int= 2097152;
+BIT_23:int= 4194304;
+BIT_24:int= 8388608;
+BIT_25:int= 16777216;
+BIT_26:int= 33554432;
+BIT_27:int= 67108864;
+BIT_28:int= 134217728;
+BIT_29:int= 268435456;
+BIT_30:int= 536870912;
+BIT_31:int= 1073741824;
+
+client <-> map server
+
+connection and auth
+
+-> string[13] //server get 13 bytes string, uniq for client type
+<- int //id
+<- int //players
+-> int //0
+<- int //need for check latency
+
+//messages
+messages have similar structure
+
+//to client
+
+
+
+[
+	byte //message type
+	int //usualy bitmask
+	body of the message
+]
+contents of body depends of bitmask
+//message types
+MSG_TEST:int= 0;
+[
+	byte //mes type
+]
+
+MSG_INFO:int= 5;
+//info additional message type, sent as bitmask, use as ==
+MSG_INFO_WAITING_TIME:int= 1;
+[
+	byte //mes type
+	int //bitmask
+	short //data - time
+]
+
+MSG_NPC:int= 1;
+//npc bitmask
+NPC_HEALTH:int= BIT_1;
+NPC_POSITION:int= BIT_2;
+NPC_CREATE:int= BIT_3;
+NPC_LEVEL:int= BIT_4;
+NPC_SHIELD:int= BIT_5;
+NPC_STATUS:int= BIT_6;
+[
+	byte //mes type
+	int //bitmask
+	int //id
+	//NPC_CREATE
+		int //owner
+		int //type
+	//NPC_POSITION
+		float //position x
+		float //position y
+	//NPC_LEVEL
+		short //level
+	//NPC_HEALTH
+		int //health
+	//NPC_SHIELD
+		int //shield
+	//NPC_STATUS
+		byte //status
+]
+
+MSG_TOWER:int= 2;
+//tower bitmask
+TOWER_HEALTH:int= BIT_1;
+TOWER_TARGET:int= BIT_2;
+TOWER_CREATE:int= BIT_3;
+TOWER_LEVEL:int= BIT_4;
+TOWER_SHIELD:int= BIT_5;
+[
+	byte //mes type
+	int //bitmask
+	int //id
+	//TOWER_CREATE
+		int //type
+		int //owner
+		int //position
+	//TOWER_TARGET
+		short //target node
+	//TOWER_LEVEL
+		short //level
+	//TOWER_HEALTH
+		int //health
+	//TOWER_SHIELD
+		int //shield
+]
+
+MSG_BULLET:int= 3;
+//bullet bitmask
+BULLET_POSITION:int= BIT_1;
+BULLET_DETONATE:int= BIT_2;
+BULLET_CREATE:int= BIT_3;
+[
+	byte //mes type
+	int //bitmask
+	int //id
+	//BULLET_POSITION
+		float //position x
+		float //position y
+	//BULLET_CREATE
+		int //type
+		int //owner
+		float //source x
+		float //source y
+	//BULLET_DETONATE
+		byte //detonate
+]
+
+MSG_PLAYER:int= 4;
+//player bitmask
+PLAYER_BASE:int= BIT_1;
+PLAYER_MONEY:int= BIT_2;
+PLAYER_CREATE:int= BIT_3;
+PLAYER_LEVEL:int= BIT_4;
+PLAYER_HERO:int= BIT_5;
+PLAYER_HERO_COUNTER:int= BIT_6;
+PLAYER_TARGET:int= BIT_7;
+PLAYER_FAIL:int= BIT_8;
+[
+	byte //mes type
+	int //bitmask
+	int //object id
+	//PLAYER_CREATE
+		int //player id
+		//9 elements
+			int //id of npc unit
+			int //number of unit
+		//9 elements
+			int //id of tower unit
+			int //number of unit
+		int //group
+		int //hero counter max
+		int //base health
+		int //hero health
+		int //hero shield
+	//PLAYER_HERO
+		int //hero object(npc) id
+	//PLAYER_HERO_COUNTER
+		int //hero counter current
+	//PLAYER_BASE
+		int //base object(tower) id
+	//PLAYER_LEVEL
+		int //level
+	//PLAYER_MONEY
+		int //money (soul)
+	//PLAYER_TARGET
+		short //targeting type
+	//PLAYER_FAIL
+		int //exp of player, sent on player fail
+]
+
+//to server
+MSG_SPAWN_TOWER:int= 1;
+[
+	byte //mes type
+	int //node id
+	short //id of unit in set 0-9
+]
+MSG_SPAWN_NPC:int= 2;
+[
+	byte //mes type
+	int //id of unit in set 0-9
+]
+MSG_DROP_TOWER:int= 3;
+[
+	byte //mes type
+	int //node id
+]
+MSG_MOVE_HERO:int= 4;
+[
+	byte //mes type
+	int //node id move to
+]
+MSG_SET_TARGET:int= 5;
+[
+	byte //mes type
+	byte //target: -1 - folow hero, 0 random, 1+ for targeting base, id==target -1
+]
+	
+///////////////////////////////////////////////////////////////////////////
+client <-> public
+
+connection and auth
+
+-> string[13] //server get 13 bytes string, uniq for client type
+<- int //some number, maybe need to be removed
+-> int //size of next string
+-> string //string
+-> int //token
+<- int //id
+<- double //epoch time on server
+
+
+//messages
+
+
+
+
+//out message types
+MESSAGE_PLAYER_CHANGE:int= 1;
+//bitmask
+BM_PLAYER_ROOM:int= BIT_3; 
+[
+	byte //mes type
+	int //bitmask
+	int //id
+	//BM_PLAYER_ROOM
+		int //type
+		int //id
+]
+
+MESSAGE_EVENT_CHANGE:int= 2;
+[
+	byte //mes type
+	int //event id
+	short //lenght of next string
+	string //map name
+	short //lenght of next string
+	string //name
+]
+
+MESSAGE_GAME_START:int= 3;
+[
+	byte //mes type
+	int //event_id
+	short //lenght of next string
+	string //hostname
+	int //port
+]
+
+	//
+

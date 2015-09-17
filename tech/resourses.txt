@@ -1,10 +1,10 @@
 ﻿Tdef::Resource - один ресурс
 {
   name - название
-  description -описание
-  type - тип обьекта
-  cost - цена для покупки
-  sell - цена при продаже
+  description - описание
+  properties - параметры
+    cost - цена для покупки
+    sell - цена при продаже  
 }
 
 Tdef::Resource::User - ресурсы принадлижащие пользователю 
