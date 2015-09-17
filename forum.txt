@@ -1,4 +1,4 @@
-как могут быть модели
+﻿как могут быть модели
 Forum  - раздел
 has_many :topics, as: :topicable, dependent: :destroy
 has_many :threads, dependent: :destroy
@@ -7,6 +7,7 @@ belongs_to :user
 	name string
 	description text
 	user_id integer
+	closed boolean
 ]
 
 Forum::Thread - подраздел
@@ -17,7 +18,8 @@ belongs_to :user
 	name string
 	description text
 	user_id integer
-	thread_id integer
+	forum_id integer
+	closed boolean
 ]
 	
 Forum::Topic - тема
@@ -30,6 +32,7 @@ belongs_to :user
 	user_id integer
 	topicable_id integer
 	topicable_type string
+	closed boolean
 ]
 
 сообщения или Forum::Message или Message
