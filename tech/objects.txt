@@ -1,30 +1,38 @@
 ﻿Tdef::Object - обьект (броня, оружее)
 {
-  name - название
-  description - описание
   type - тип обьекта
   properties - параметры
+  [
+    name - название
+    description - описание
     cost - цена для покупки
     sell - цена при продаже
     функциональные параметры
+  ]
 }
-
+index: type, id
 
 Tdef::Scheme - схема позволяющая создать обьект
 {
-  name - название
-  description - описание
   object_id - обьект полученный после крафта
   properties - параметры
+  [
+    name - название
+    description - описание
     cost - цена для покупки
     sell - цена при продаже
     craft_time - время крафта в секундах
+  ]
 }
+index: object_id, id
 схеме соответствуют ресурсы необходимые для сборки has_and_belongs_to
+
 
 Tdef::Craft - обьекты поставленные на крафт
 {
+  player_id - владелец
   object_id - обьект полученный после крафта
   ready_at - время окончания сборки
   created_at - соответствует начале крафта
 }
+index: id, player_id
