@@ -12,12 +12,12 @@ index: player_id
 Tdef::Player::Item- обьекты принадлижащие пользователю 
 {
   player_id - владелец
-  item_id - ид обьекта
-  item_type - тип обьекта
+  subject_id - ид обьекта
+  subject_type - тип обьекта
   quantity - количество
   capacity - максимально доступное количество
 }
-index: player_id, item_id item_type, quantity
+index: player_id, subject_id subject_type, quantity
 
 seeds: при добавлении новых обектов для каждого игрока должны быть созданы items по каждому из типов, с заданой вместимостью и количеством 0.
 абсолютно максимальное количество обьектов одного типа 2000000000  
