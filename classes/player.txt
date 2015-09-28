@@ -12,8 +12,8 @@ index: player_id
 Tdef::Player::Item- обьекты принадлижащие пользователю 
 {
   player_id - владелец
-  subject_id - ид обьекта
-  subject_type - тип обьекта
+  object_id - ид обьекта
+  object_type - тип обьекта
   quantity - количество
   capacity - максимально доступное количество
 }
