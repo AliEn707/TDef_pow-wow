@@ -1,0 +1,39 @@
+﻿connector must provide next functions for javascript:
+ 
+sendToConnector(text:String) 
+	- simple text send to connector, not used
+mapConnect(host:String, port:String) 
+	- connect to map
+mapClose() 
+	- close map socket and clear handlers
+publicConnect(host:String, port:String, user:String, token:String) 
+	- connect to public
+mapSend(value:String) 
+	- send data to map
+publicSend(value:String) 
+	- send data to public
+		- value in format "type1,value1,type2,value2"
+		types:
+			byte - signed 1 byte
+			char - the same is byte
+			short - signed 2 bytes
+			int - sidned 4 bytes
+			uint - undsigned 4 bytes
+			float - float 4 bytes
+			double - float 8 bytes
+			string - 16 byte string long, then sequence of bytes
+
+JavaScript available functions:
+
+connectorReady() - callback after connector initialised
+sendToJavaScript
+isReady() - returns that javascript is ready
+publicConnectionError(value) - callback on error connect to public
+publicConnected(value) - callback on connected to public
+publicAuthFail() - callback on public autentification fail
+proceedPublicMessages(str) - str is string: array of objects like [{aa:11},{bb:22},{cc:33}]
+mapConnectionError(val) - callback on connected to map
+mapConnected() - callback on connection established
+mapClosed() - callback on map connection close
+proceedMapMessages(str) - str is string: array of objects like [{aa:11},{bb:22},{cc:33}]
+mapAuthData() - callback on map auth
