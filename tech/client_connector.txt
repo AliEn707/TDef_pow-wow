@@ -26,7 +26,7 @@ publicSend(value:String)
 JavaScript available functions:
 
 connectorReady() - callback after connector initialised
-sendToJavaScript
+sendToJavaScript(str) - used for logging (~ console.log(str))
 isReady() - returns that javascript is ready
 publicConnectionError(value) - callback on error connect to public
 publicConnected(value) - callback on connected to public
