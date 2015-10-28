@@ -1,0 +1,55 @@
+
+Tdef::Hero
+{
+	name: string
+	description: string
+	properties: text
+}
+
+Tdef::Hero::Weapon
+{
+	name: string
+	description: string
+	properties: text
+}
+
+Tdef::Hero::Weapon::Mod - hero weapon mod types
+{
+	name: string
+	description: string
+	modifications: text
+}
+
+Tdef::Type::Hero::Weapon - hero weapon types
+{
+	name: string
+	description: string
+	category: string
+}
+
+Tdef::Hero::Weapon::Type - matching hero weapons and types
+{
+	weapon_id: int
+	type_id: int
+}
+
+Tdef::Player::Hero - matching heros and players
+{
+	player_id: int
+	hero_id: int
+	position: string - (int int)
+	//other params
+}
+
+Tdef::Player::Hero::Weapon matching player's hero and weapons
+{
+	hero_id: int
+	weapon_id: int
+}
+
+Tdef::Player::Hero::Weapon::Mod matching player's hero's weapons and mods
+{
+	weapon_id: int
+	mod_id: int
+}
+
