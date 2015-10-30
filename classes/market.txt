@@ -1,0 +1,17 @@
+﻿игровые магизины расбросаны по миру
+
+Tdef::Market - игровой магазин
+{
+  name: string
+  description: text
+  position: string(int int)
+  
+}
+
+Tdef::Market::Item - продоваемая позиция в игровом магазине
+{
+  market_id: int
+  object_id: int
+  object_type: string
+  player_id: int //owner who wants to sell the item
+}

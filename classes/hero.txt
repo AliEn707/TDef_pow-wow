@@ -1,10 +1,13 @@
-
+﻿
 Tdef::Hero
 {
 	name: string
 	description: string
 	properties: text
 }
+has_and_belongs_to_many Tdef::Hero::Weapon::Type - hero is able to use many weapons types
+//SELECT h.*, ARRAY(SELECT id FROM weapons w WHERE ARRAY(SELECT type_id FROM hero_types WHERE hero_id = h.id) @> ARRAY(SELECT type_id FROM weapon_types WHERE weapon_id = w.id)) as weapons FROM heros h; - example of getting objects with other objects, pl will be {1,2,3}
+// /|\ not completed
 
 Tdef::Hero::Weapon
 {
@@ -12,44 +15,31 @@ Tdef::Hero::Weapon
 	description: string
 	properties: text
 }
+has_and_belongs_to_many Tdef::Hero::Weapon::Type - types specified for current weapon
+
+Tdef::Hero::Weapon::Type - hero weapon types
+{
+	name: string
+	description: string
+	category: string //used to devide different types of types, when only one category instanse may be used
+}
 
 Tdef::Hero::Weapon::Mod - hero weapon mod types
 {
 	name: string
 	description: string
+	category: string //used to devide different types of modes, when only one category instanse may be used
 	modifications: text
-}
-
-Tdef::Type::Hero::Weapon - hero weapon types
-{
-	name: string
-	description: string
-	category: string
-}
-
-Tdef::Hero::Weapon::Type - matching hero weapons and types
-{
-	weapon_id: int
-	type_id: int
 }
 
 Tdef::Player::Hero - matching heros and players
 {
 	player_id: int
 	hero_id: int
+	weapon_id: int
+	mod_id: int // if can be used only one mod
 	position: string - (int int)
 	//other params
 }
-
-Tdef::Player::Hero::Weapon matching player's hero and weapons
-{
-	hero_id: int
-	weapon_id: int
-}
-
-Tdef::Player::Hero::Weapon::Mod matching player's hero's weapons and mods
-{
-	weapon_id: int
-	mod_id: int
-}
+has_and_belongs_to_many Tdef::Hero::Weapon::Mod // if can be used many mods
 
