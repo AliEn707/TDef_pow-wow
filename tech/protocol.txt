@@ -158,23 +158,25 @@ PLAYER_HERO:int= BIT_5;
 PLAYER_HERO_COUNTER:int= BIT_6;
 PLAYER_TARGET:int= BIT_7;
 PLAYER_FAIL:int= BIT_8;
+PLAYER_SETS:int= BIT_9;
 [
 	byte //mes type
 	int //bitmask
 	int //object id
 	//PLAYER_CREATE
 		int //player id
-		//9 elements
-			int //id of npc unit
-			int //number of unit
-		//9 elements
-			int //id of tower unit
-			int //number of unit
 		int //group
 		int //hero counter max
 		int //base health
 		int //hero health
 		int //hero shield
+	//PLAYER_SETS
+    //9 elements
+			int //id of npc unit
+			int //number of unit
+		//9 elements
+			int //id of tower unit
+			int //number of unit
 	//PLAYER_HERO
 		int //hero object(npc) id
 	//PLAYER_HERO_COUNTER
