@@ -6,7 +6,9 @@ Tdef::Hero
 	properties: text
 }
 has_and_belongs_to_many Tdef::Hero::Weapon::Type - hero is able to use many weapons types
-//SELECT h.*, ARRAY(SELECT id FROM weapons w WHERE ARRAY(SELECT type_id FROM hero_types WHERE hero_id = h.id) @> ARRAY(SELECT type_id FROM weapon_types WHERE weapon_id = w.id)) as weapons FROM heros h; - example of getting objects with other objects, pl will be {1,2,3}
+//SELECT h.*, ARRAY(SELECT id FROM weapons w WHERE ARRAY(SELECT type_id FROM hero_types WHERE hero_id = h.id) @> ARRAY(SELECT type_id FROM weapon_types WHERE weapon_id = w.id)) as weapons FROM heros h; 
+//SELECT h.*, ARRAY(SELECT wt.weapon_id FROM weapon_types wt JOIN hero_types ht ON wt.type_id = ht.type_id WHERE ht.hero_id = h.id EXCEPT (SELECT wt2.weapon_id FROM weapon_types wt2 WHERE wt2.type_id not in (SELECT ht2.type_id from hero_types ht2 WHERE ht2.hero_id = h.id))) as weapons FROM heros h; 
+// - example of getting objects with other objects, pl will be {1,2,3}
 // /|\ not completed
 
 Tdef::Hero::Weapon
