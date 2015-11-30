@@ -210,10 +210,13 @@ MSG_DROP_TOWER:int= 3;
 	byte //mes type
 	int //node id
 ]
-MSG_MOVE_HERO:int= 4;
+MSG_MOVE_NPC:int= 4;
 [
 	byte //mes type
 	int //node id move to
+	byte //number of npc ids (127 max)
+	//next will be npc ids
+        int //npc ids
 ]
 MSG_SET_TARGET:int= 5;
 [
@@ -253,7 +256,16 @@ BM_PLAYER_ROOM:int= BIT_3;
 		int //id
 ]
 
-MESSAGE_EVENT_CHANGE:int= 2;
+MESSAGE_GAME_START:int= 2;
+[
+	byte //mes type
+	int //event_id
+	short //lenght of next string
+	string //hostname
+	int //port
+]
+
+MESSAGE_EVENT_CHANGE:int= 3;
 [
 	byte //mes type
 	int //event id
@@ -263,14 +275,13 @@ MESSAGE_EVENT_CHANGE:int= 2;
 	string //name
 ]
 
-MESSAGE_GAME_START:int= 3;
+MESSAGE_EVENT_DROP:int= 4;
 [
 	byte //mes type
-	int //event_id
-	short //lenght of next string
-	string //hostname
-	int //port
+	int //event id
 ]
+
+
 
 	//
 
