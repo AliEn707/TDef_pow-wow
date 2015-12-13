@@ -1,0 +1,2 @@
+﻿-fix idle status
+-add BigEndian support

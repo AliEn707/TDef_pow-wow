@@ -1,0 +1,3 @@
+﻿-add multiprocessing access to db
+-add BigEndian support
+-add other db types (sqlite, mysql)
