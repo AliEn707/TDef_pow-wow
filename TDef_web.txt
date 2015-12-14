@@ -1,5 +1,6 @@
-﻿-fix canvas 2d error
--complete java connector
+﻿-complete java connector
 -complete forum
 -add sounds
 -set update timer on flash connector to 125ms
+-add smooth interpolation
++fix canvas error (on 2d drawing)

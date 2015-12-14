@@ -1,2 +1,3 @@
 ﻿-fix idle status
 -add BigEndian support
++add Npcs control message
