@@ -4,5 +4,9 @@
 -add log levels(printf -> Verbose, perror-> Fatal)
 -add map preparing data (player unit config)
 -add check for player already logged in
+-add time to logs
+-add buffer to log message
+-add log levels
+-add parameter to enable log to stdout (disabled by default)
 +add multiprocessing access to db
 +bitswap function (preparing to BigEndian systems)
