@@ -1,5 +1,8 @@
-﻿-add multiprocessing access to db
--add BigEndian support
+﻿-add BigEndian support
 -add other db types (sqlite, mysql)
--check connection error from andriod (firefox)
+-check connection error after wrong connect params
+-add log levels(printf -> Verbose, perror-> Fatal)
+-add map preparing data (player unit config)
+-add check for player already logged in
++add multiprocessing access to db
 +bitswap function (preparing to BigEndian systems)

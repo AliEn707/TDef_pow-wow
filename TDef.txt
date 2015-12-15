@@ -1,4 +1,6 @@
 ﻿-fix idle status
 -add BigEndian support
--check manager freeses
+-add normal game end
+-add loot on unit defeat
++check manager freeses
 +add Npcs control message

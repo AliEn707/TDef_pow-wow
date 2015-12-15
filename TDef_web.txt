@@ -3,4 +3,5 @@
 -add sounds
 -set update timer on flash connector to 125ms
 -add smooth interpolation
+-add unit configuration
 +fix canvas error (on 2d drawing)
