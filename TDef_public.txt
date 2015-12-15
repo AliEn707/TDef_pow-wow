@@ -1,4 +1,5 @@
 ﻿-add multiprocessing access to db
 -add BigEndian support
 -add other db types (sqlite, mysql)
+-check connection error from andriod (firefox)
 +bitswap function (preparing to BigEndian systems)

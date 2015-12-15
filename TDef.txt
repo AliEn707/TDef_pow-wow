@@ -1,3 +1,4 @@
 ﻿-fix idle status
 -add BigEndian support
+-check manager freeses
 +add Npcs control message
