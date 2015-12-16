@@ -1,4 +1,5 @@
-﻿-fix idle status
+﻿-fix segfault on server (find when it happens)
+-fix idle status
 -add BigEndian support
 -add normal game end
 -add loot on unit defeat
