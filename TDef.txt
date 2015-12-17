@@ -1,4 +1,5 @@
 ﻿-!fix segfault on server (2 times happens on many npcs)
+-move type get to dedicated function
 -fix idle status
 -fix first player don't get info about next
 -add BigEndian support
