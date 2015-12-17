@@ -1,5 +1,6 @@
-﻿-fix segfault on server (find when it happens)
+﻿-!fix segfault on server (2 times happens on many npcs)
 -fix idle status
+-fix first player don't get info about next
 -add BigEndian support
 -add normal game end
 -add loot on unit defeat
