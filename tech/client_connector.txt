@@ -1,5 +1,7 @@
 ﻿connector must provide next functions for javascript:
- 
+
+mapGetData()
+    - returns string of objects, got from server, like [{aa:11},{bb:22},{cc:33}]
 sendToConnector(text:String) 
 	- simple text send to connector, not used
 mapConnect(host:String, port:String) 
@@ -35,5 +37,4 @@ proceedPublicMessages(str) - str is string: array of objects like [{aa:11},{bb:2
 mapConnectionError(val) - callback on connected to map
 mapConnected() - callback on connection established
 mapClosed() - callback on map connection close
-proceedMapMessages(str) - str is string: array of objects like [{aa:11},{bb:22},{cc:33}]
 mapAuthData() - callback on map auth
