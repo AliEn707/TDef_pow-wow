@@ -1,0 +1,11 @@
+;-;add BigEndian support
+;-;add other db types (sqlite, mysql)
+!;-;check connection error after wrong connect params
+;-;add log levels(printf -> Verbose, perror-> Fatal)
+;-;add map preparing data (player unit config)
+;-;add check for player already logged in
+;-;add parameter to enable log to stdout (disabled by default)
+;+;add multiprocessing access to db
+;+;bitswap function (preparing to BigEndian systems)
+;+;add time to logs
+;+;add buffer to log message
