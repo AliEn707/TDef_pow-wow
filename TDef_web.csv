@@ -2,8 +2,11 @@
 ;-;complete forum
 ;-;add sounds
 ;-;add smooth interpolation
-;-;add unit configuration
-;-;(Flash)split data object to curr and all
+;-;add unit configuration screen
+;-;add timer info for waves
+;-;check why tower mwnu depends on obj sort
+;+;(Flash)split data object to curr and all
+;+;add getting data by call connector from JS
 ;+;set update timer on flash connector to 100ms
 ;+;move workers code to classes
 !;+;fix canvas error (on 2d drawing)
