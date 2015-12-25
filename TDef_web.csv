@@ -5,8 +5,10 @@
 ;-;add unit configuration screen
 ;-;add timer info for waves
 ;-;check why tower mwnu depends on obj sort
+;-;set auth to oauth only
+;-;move forum to dedicated app
 ;+;(Flash)split data object to curr and all
 ;+;add getting data by call connector from JS
-;+;set update timer on flash connector to 100ms
+!;+;set update timer on flash connector to 100ms
 ;+;move workers code to classes
-!;+;fix canvas error (on 2d drawing)
+;+;fix canvas error (on 2d drawing)
