@@ -71,7 +71,7 @@ MSG_INFO_WAITING_TIME:int= 1;
 [
 	byte //mes type
 	int //bitmask
-	short //data - time
+	int //data - time
 ]
 
 MSG_NPC:int= 1;
