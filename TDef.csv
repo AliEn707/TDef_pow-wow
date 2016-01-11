@@ -1,11 +1,11 @@
 !;-;fix segfault on server (2 times happens on many npcs)
 ;-;move type get to dedicated function
 ;-;fix idle status
-;-;add BigEndian support
 ;-;add normal game end
 ;-;add loot on unit defeat
 ;-;add send timer info for waves
 ;-;set type to units on spawn
+;+;add BigEndian support
 ;+;fix first player don't get info about next
 ;+;check manager locks
 ;+;add Npcs control message
