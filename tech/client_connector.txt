@@ -38,3 +38,100 @@ mapConnectionError(val) - callback on connected to map
 mapConnected() - callback on connection established
 mapClosed() - callback on map connection close
 mapAuthData() - callback on map auth
+
+
+map objects format:
+Info:
+{
+	objtype: "Info",
+	type: string, //'start_timer'
+	data: int
+}
+
+Npc: 
+{
+	objtype: "Npc",
+	id: int,
+!	create: 1, // create
+!		owner: int, // create
+!		type: int, // create
+!	grid: {
+		x: float,
+		y: float
+	}
+!	level: int,
+!	health: int,
+!	shield: int,
+!	status: int,
+}
+
+Tower:
+{
+	objtype: "Tower",
+	id: int,
+!	create:1,// create
+!		type: int,
+!		owner: int,
+!		position: int,
+!	target: short,
+!	level: short,
+!	health: int,
+!	shield: int,
+}
+
+Bullet:
+{
+	objtype: "Bullet",
+	id: int,
+!	grid:{
+		x: float,
+		y: float
+	}
+!	create: 1,
+!		type: int,
+!		owner: int,
+!		source: {
+			x: float,
+			y: float
+		}
+!	detonate: byte,
+}
+
+Player:
+{
+	objtype:"Player",
+	id: int,
+!	create: 1,
+!		pid: int,
+!		group: int,
+!		_hero_counter: int,
+!		base_type: {
+			health: int,//fix
+		},
+!		hero_type: {
+			health: int,//fix
+			shield: int,//fix
+		},
+!	tower_set: {
+	//for(i=0;i<NPC_SET_SIZE;i++)
+		i: {,
+			id: int,
+			size: int,
+		},
+	}
+!	npc_set: {
+		//for(i=0;i<TOWER_SET_SIZE;i++){
+		i: {
+			id: int,
+			size: int,
+		}
+	}
+!	hero: int,
+!	hero_counter: int,
+!	base: int,
+!	level: int,
+!	money: int,
+!	targeting: short,
+!	fail: 1,
+!		exp: int,
+}
