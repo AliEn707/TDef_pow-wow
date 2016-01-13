@@ -5,7 +5,10 @@
 ;-;add map preparing data (player unit config)
 ;-;add check for player already logged in
 ;-;add parameter to enable log to stdout (disabled by default)
+;-;add room processing in 4 stages
+;-;move events to binTree
 ;+;add multiprocessing access to db
 ;+;bitswap function (preparing to BigEndian systems)
 ;+;add time to logs
 ;+;add buffer to log message
+;+;move rooms to binTree
