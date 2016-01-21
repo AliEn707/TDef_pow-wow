@@ -41,6 +41,10 @@ standart characters:
     Barnett Vengeance | Crossbow pistol
     XM42 | Flamethrower
 
+  Weapon_mods:
+    Poison arroys | Crossbow
+    Hydrargyrum bullets | Shotgun, Pistol?, Riffle?
+  
   Npcs:
 	
   Towers:
